@@ -1,0 +1,31 @@
+CONTROL ESCOLAR FÍSICA — PRIMERA VERSIÓN
+
+Contenido:
+- index.html: aplicación
+- manifest.webmanifest: configuración instalable
+- sw.js: caché básica para uso sin conexión tras la primera carga
+
+PARA ABRIR EN ANDROID:
+La cámara y la instalación PWA requieren servir la aplicación desde HTTPS.
+Una opción gratuita:
+1. Crea una cuenta en GitHub.
+2. Crea un repositorio público llamado control-escolar-fisica.
+3. Sube los tres archivos de esta carpeta a la raíz.
+4. En Settings > Pages, activa Deploy from a branch y selecciona main / root.
+5. Abre la URL HTTPS que GitHub Pages te proporcione en Chrome Android.
+6. Usa el menú de Chrome > Añadir a pantalla de inicio / Instalar aplicación.
+
+USO:
+- Registra primero los grupos y alumnos.
+- Cada alumno tiene un ID único; abre su expediente y toca Ver QR.
+- Crea actividades antes de registrar calificaciones.
+- Escanea QR desde la pestaña Escanear. En Android Chrome se usa BarcodeDetector.
+- Exporta CSV desde Reportes; se abre en Excel.
+- Descarga respaldos JSON periódicamente desde Configuración.
+
+LIMITACIONES DE ESTA VERSIÓN:
+- Los datos se guardan localmente en el navegador/dispositivo; no hay sincronización entre teléfonos.
+- El escaneo requiere HTTPS, permiso de cámara y navegador compatible con BarcodeDetector.
+- La generación QR usa una biblioteca CDN y requiere internet al abrir esa función por primera vez.
+- El reporte inicial muestra promedio simple. Las ponderaciones se guardan, pero aún no se aplican al promedio trimestral.
+- CSV es compatible con Excel; XLSX nativo, credenciales por lote e historial visual completo se dejan para la siguiente etapa.
